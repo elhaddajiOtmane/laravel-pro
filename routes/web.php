@@ -12,13 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// index turn you to home 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('home');
 
-route::group(['middleware' => 'auth:api','namespace'=>'api'],function(){
 
-    Route::get('categories','CategorieController@index');
 
-});
